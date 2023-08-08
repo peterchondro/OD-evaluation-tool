@@ -37,8 +37,8 @@ Follow these steps to evaluate your dataset:
 - Click on "Select Class List" and locate your class list file for your dataset.
 - Click on "Select Weights List" and locate your weight list file for your dataset.
 - (Optional) Click on "Insert RGB Images" and locate the RGB data files of your dataset.
-- Click on "Insert GT Images" and locate the ground truth data files of your dataset.
-- Click on "Insert PD Images" and locate the result prediction data files of your dataset.
+- (Optional) Click on "Insert GT Images" and locate the ground truth data files of your dataset.
+- (Optional) Click on "Insert PD Images" and locate the result prediction data files of your dataset.
 
 ## Single Image Analysis
 
