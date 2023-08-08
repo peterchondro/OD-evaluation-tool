@@ -26,7 +26,7 @@ A tool for evaluating image dataset performance using weighted analysis.
 
 ## Usage
 
-1. Navigate to the `./EvalTool_2DWeighted` directory using your terminal.
+1. Navigate to the `./OD-evaluation-tool` directory using your terminal.
 
 2. Launch the application:
    ```bash
