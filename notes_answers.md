@@ -20,25 +20,25 @@ Main function to calculate evaluation metrics.
 
 # UI.py
 - L198: Why detected class ID would exceed the maximum GT class ID?
-	```python
+	```text
 	#Class list between ground truth and prediction could be different.
 	#This ensures that the class list could be limited to certain class list.
 	```
 - L211: Is `nFP[self.class_num]` false positives in backgrond regions?
-	```python
+	```text
 	#This was used to contain classes from 3D object detector, of which at that time does not have any class.
 	```
 - L216: Why using `IOU_th = 0.15`?
-	```python
+	```text
 	#This is a parameter, the value corresponds to TP/FP/FN.
 	```
 - L245: Why adding the limitation of bbox center distance?
-	```python
+	```text
 	#Such measure was deemed necessary to evaluate on both 2D and 3D.
 	#As far as the thought process that our previous manager had, I don't remember, you may ask him.
 	```
 - L246-L261: Inefficient IOU calculation process.
-	```python
+	```text
 	#To accomodate 3D evaluation, such IoU calculation was implemented.
 	#In addition, there is also no emphasize on the computation cost during development.
 	```
@@ -55,12 +55,12 @@ Main function to calculate evaluation metrics.
 			# Warning: we should comfirm the state of matches[matched_dt] before pairing (gt, matched_dt)
 	```
 	-
-	```python
+	```text
 	#You're welcome to test with your own data and confirm whether TP/FP/FN are the same as you expect.
 	#Otherwise, I think you may have the option to refine this part.
 	```
 - L273: What does `classRS == -1` mean? Why we match (gt, dt) & increase FN at the same time?
-	```python
+	```text
 	#classRS = -1 is related to no-class class in 3D.
 	```
 - L276-L280: The matching process is weird.
@@ -76,23 +76,23 @@ Main function to calculate evaluation metrics.
 	# Therefore, (gt1, dt1, dt2) would be counted as (FN, FP, FP).
 	```
 	-
-	```python
+	```text
 	#Based on this example, TP and FP will always 1 and 1, regardless which one.
 	```
 - L279: If `classGT != classRS`, both FN & FP should be added by 1.
-	```python
+	```text
 	#FP should be added with 1, but was removed later. I guess you should as to the previous manager.
 	```
 - L280: Is `hER` a partial confusion matrix that only calculates error predictions?
-	```python
+	```text
 	#Yes
 	```
 - L113: Does `self.lACC` equal to `TPR`?
-	```python
+	```text
 	#Yes
 	```
 - L114: The calculation of `self.lFPR = FP / GT = FP / (TP + FN)` is wrong. It should be `FP / (FP + TN)`. (Note: It's meaningless to define the number of true negatives of an object detection task, so we should NOT calculate FPR.)
-	```python
+	```text
 	#Yes, the equation used there is different from the conventional FPR. 
 	#You are suggested to discuss with previous manager.
 	#But if I may answer this, I think the calculation of FPR was necessary 
@@ -100,11 +100,11 @@ Main function to calculate evaluation metrics.
 	#which was translated into FPR.
 	```
 - L133-L136: `FP[self.class_num]` (i.e., FP in background regions) is not accumulated to total sum.
-	```python
+	```text
 	#This is not used in final calculation for 2D.
 	```
 - L71 & L292: What's the difference between `AnalysisThread_2D()` and `AnalysisDataSetThread_2D()`?
-	```python
+	```text
 	#AnalysisThread_2D() is for single image analysis
 	#AnalysisDataSetThread_2D() is for multiple image/batch analysis
 	```
