@@ -77,6 +77,7 @@ Ensure your dataset follows these naming rules:
 ## Notes
 
 This README provides instructions for using the Dataset Evaluation Tool. Follow the steps carefully to analyze and evaluate your dataset effectively.
+You can use sample data in drive-download-20230801T084518Z-001 for your test and to get to know the right format.
 
 ---
 
