@@ -81,7 +81,7 @@ Main function to calculate evaluation metrics.
 	```
 - L279: If `classGT != classRS`, both FN & FP should be added by 1.
 	```text
-	#FP should be added with 1, but was removed later. I guess you should as to the previous manager.
+	#FP should be added with 1, but was removed later. I guess you should ask the previous manager.
 	```
 - L280: Is `hER` a partial confusion matrix that only calculates error predictions?
 	```text
@@ -95,7 +95,7 @@ Main function to calculate evaluation metrics.
 	```text
 	#Yes, the equation used there is different from the conventional FPR. 
 	#You are suggested to discuss with previous manager.
-	#But if I may answer this, I think the calculation of FPR was necessary 
+	#But if I may answer this, I think the calculation of FPR was considered as necessary 
 	#As the MOEA proposal that was written on 2017 was emphasizing on false alarm rate, 
 	#which was translated into FPR.
 	```
