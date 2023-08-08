@@ -69,10 +69,10 @@ You can also perform similar steps for 3D data. Follow the instructions above, c
 
 Ensure your dataset follows these naming rules:
 
-- RGB IMAGES: x.PNG
-- GT IMAGES: x.PNG
-- PD IMAGES: x.PNG
-  (Where x represents the same name for corresponding images.)
+- RGB IMAGES: x.YY
+- GT IMAGES: x.ZZ
+- PD IMAGES: x.ZZ
+  (Where x represents the same name for corresponding images. YY is any image format, ZZ is TXT format)
 
 ## Notes
 
