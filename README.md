@@ -30,7 +30,7 @@ A tool for evaluating image dataset performance using weighted analysis.
 
 2. Launch the application:
    ```bash
-   python3 UI.py
+   python3 evaluation_artc.py
 
 Follow these steps to evaluate your dataset:
 
