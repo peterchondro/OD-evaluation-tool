@@ -96,7 +96,6 @@ Main function to calculate evaluation metrics.
 - L114: The calculation of `self.lFPR = FP / GT = FP / (TP + FN)` is wrong. It should be `FP / (FP + TN)`. (Note: It's meaningless to define the number of true negatives of an object detection task, so we should NOT calculate FPR.)
 	```text
 	Indeed, the equation employed there differs from the conventional FPR.
- 	It's recommended to engage in a conversation with the previous project manager to delve into this.
  	However, if I may contribute, the inclusion of FPR calculation appears to stem from
  	the significance attributed to the so-called false alarm rate in the 2017 MOEA proposal.
  	This emphasis translated into the utilization of FPR as a metric.
