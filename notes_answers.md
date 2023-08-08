@@ -36,8 +36,6 @@ Main function to calculate evaluation metrics.
 - L245: Why adding the limitation of bbox center distance?
 	```text
 	This measure was essential for comprehensive evaluation in both 2D and 3D contexts.
- 	Regarding the rationale of our previous manager, I don't recall;
- 	you could inquire with him directly.
 	```
 - L246-L261: Inefficient IOU calculation process.
 	```text
@@ -86,7 +84,6 @@ Main function to calculate evaluation metrics.
 - L279: If `classGT != classRS`, both FN & FP should be added by 1.
 	```text
 	Initially, FP was incremented by 1, but this was later removed.
- 	For further clarification, it would be advisable to consult the previous manager.
 	```
 - L280: Is `hER` a partial confusion matrix that only calculates error predictions?
 	```text
@@ -99,9 +96,9 @@ Main function to calculate evaluation metrics.
 - L114: The calculation of `self.lFPR = FP / GT = FP / (TP + FN)` is wrong. It should be `FP / (FP + TN)`. (Note: It's meaningless to define the number of true negatives of an object detection task, so we should NOT calculate FPR.)
 	```text
 	Indeed, the equation employed there differs from the conventional FPR.
- 	It's recommended to engage in a conversation with the previous manager to delve into this.
+ 	It's recommended to engage in a conversation with the previous project manager to delve into this.
  	However, if I may contribute, the inclusion of FPR calculation appears to stem from
- 	the significance attributed to the false alarm rate in the 2017 MOEA proposal.
+ 	the significance attributed to the so-called false alarm rate in the 2017 MOEA proposal.
  	This emphasis translated into the utilization of FPR as a metric.
 	```
 - L133-L136: `FP[self.class_num]` (i.e., FP in background regions) is not accumulated to total sum.
