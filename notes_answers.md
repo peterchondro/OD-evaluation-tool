@@ -78,8 +78,7 @@ Main function to calculate evaluation metrics.
 	```
 	-
 	```text
-	In this specific example, both TP and FP are consistently 1,
- 	regardless of the specific scenario (Assuming IoU_th @ 0.5).
+	In this specific example, I guess NMS would not allow this case to happen.
 	```
 - L279: If `classGT != classRS`, both FN & FP should be added by 1.
 	```text
